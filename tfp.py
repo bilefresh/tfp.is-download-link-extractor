@@ -1,3 +1,6 @@
+"""
+Created by Farouk Bilesanmi
+"""
 from selenium import webdriver
 import time
 import datetime
@@ -17,11 +20,6 @@ def tfp(site):
     title.click()
     te = browser.find_element_by_xpath("/html/body/div[2]/div[2]/div/div[1]/div/article/div/div[2]")
     ty = te.text
-    #print (ty)
-##    tt = re.search(pattern, ty)
-##    text = str(tt.groups())
-##    text = str(text).replace("('",'').replace("',)","")
-    #print(text)
     main = browser.find_element_by_link_text("Download Now")
     browser.execute_script("arguments[0].click();", main)
     browser.switch_to.window(browser.window_handles[-1]) 
@@ -82,5 +80,3 @@ def tfp(site):
 ss = input("Enter what you want to download: ")
 print(tfp(ss))
 input("Press Enter to close.....")
-##print(tfp("the irishman 720"))
-
